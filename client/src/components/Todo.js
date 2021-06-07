@@ -26,7 +26,7 @@ const Todo = (props) => {
   // HANDLE SUBMIT
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.put(`/put/${props.id}`, {
+    axios.put(`https://do-you-todo.herokuapp.com/put/${props.id}`, {
       name: newName
     });
     props.editTask(props.id, newName);

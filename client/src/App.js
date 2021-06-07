@@ -30,7 +30,7 @@ function App() {
   }, []);
 
    const getTodos = async () => {
-    const res = await axios.get('/getposts');
+    const res = await axios.get('https://do-you-todo.herokuapp.com/getposts');
     try {
       const data = await res.data;
       return data;
@@ -50,7 +50,7 @@ function App() {
   };
 
   const deleteTask = (id) => {
-    axios.delete(`/delete/${id}`);
+    axios.delete(`https://do-you-todo.herokuapp.com/delete/${id}`);
     const remainingTasks = tasks.filter(task => id !== task._id);
     setTasks(remainingTasks)
   };
@@ -71,7 +71,7 @@ const addTask = async (task) => {
     }
   );
 
-  const posts = await axios.get('/getposts');
+  const posts = await axios.get('https://do-you-todo.herokuapp.com/getposts');
   const data = await posts.data;
   
   setTasks(data)
