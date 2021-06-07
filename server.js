@@ -13,7 +13,7 @@ app.use(express.json());
 
 app.use(route);
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 const mongoDB = process.env.MONGO_DB;
 
