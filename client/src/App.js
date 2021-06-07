@@ -30,7 +30,7 @@ function App() {
   }, []);
 
    const getTodos = async () => {
-    const res = await axios.get('/getposts');
+    const res = await axios.get('https://doyou-todo.herokuapp.com/getposts');
     try {
       const data = await res.data;
       return data;
@@ -71,7 +71,7 @@ const addTask = async (task) => {
     }
   );
 
-  const posts = await axios.get('/getposts');
+  const posts = await axios.get('https://doyou-todo.herokuapp.com/getposts');
   const data = await posts.data;
   
   setTasks(data)
