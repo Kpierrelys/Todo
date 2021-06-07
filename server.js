@@ -11,7 +11,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use('/', route);
+app.use(route);
 
 const PORT = 5000;
 

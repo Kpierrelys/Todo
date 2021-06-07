@@ -7,11 +7,11 @@ router.route('/posts').post((req, res) => {
     const todo = new TodoModel({name: name})
     todo.save()
         .then(() => res.json({
-            message: "Created account successfully"
+            message: "Created task successfully"
         }))
         .catch(err => res.status(400).json({
             "error": err,
-            "message": "Error creating account"
+            "message": "Error creating a task"
         }))
 });
 

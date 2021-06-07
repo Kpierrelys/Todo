@@ -2,7 +2,7 @@
   "name": "needs",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://do-you-todo.herokuapp.com",
+  "proxy": "https://doyou-todo.herokuapp.com",
   "dependencies": {
     "@testing-library/jest-dom": "^5.13.0",
     "@testing-library/react": "^11.2.7",
